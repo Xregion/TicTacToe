@@ -95,13 +95,15 @@ public class TicTacToe {
         turn = 1;
     }
 
-    public String GetStatus() {
+    public int GetStatus() {
         if (WhoWon() == 1)
-            return "Player 1 won!";
+            return R.string.player_1_won;
         else if (WhoWon() == 2)
-            return "Player 2 won!";
+            return R.string.player_2_won;
+        else if (turn == 1)
+            return R.string.player_1_turn;
         else
-            return "Player " + turn + "'s turn";
+            return R.string.player_2_turn;
     }
 
 }
